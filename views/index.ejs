@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body class="container-fluid">
+
+    <div id="header" class="jumbotron">
+      <h1 class="display-3"><%= title %></h1>
+      <hr class="m-y-2">
+      <p class="lead"><%= subtitle %></p>
+    </div>
+
+    <div class="jumbotron">
+      <h4> <%= heading1 %> </h4>
+      <kbd> <%= heading2 %>  </kbd>
+      <hr class="m-y-2">
+
+      <ul class="list-group">
+        <li class="list-group-item"><%= rule1 %></li>
+        <li class="list-group-item"><%= rule2 %></li>
+        <li class="list-group-item"><%= rule3 %></li>
+        <li class="list-group-item"><%= rule4 %></li>
+      </ul>
+
+        <div class="col-md-6 well">
+              <div class="input-group">
+                <span class="input-group-addon">M</span>
+                <input type="text" id="columns" class="form-control" placeholder="<%= columns %>" aria-describedby="basic-addon1">
+              </div>
+              <br>
+              <div class="input-group">
+                <span class="input-group-addon">N</span>
+                <input type="text" id="rows" class="form-control" placeholder="<%= rows %>" aria-describedby="basic-addon1">
+              </div>
+        </div>
+        <div class="col-md-6">
+              <div class="form-group">
+                <label for="liveCells"><%= liveCells %></label>
+                <textarea class="form-control" id="liveCells" rows="3"></textarea>
+              </div>
+              <br>
+        </div>
+
+      <div class="lead">
+        <div class="col-md-4">
+            <button class="btn btn-primary btn-lg" onclick="getNextGeneration()" ><%= getNextGeneration %></button>
+         </div>
+          <div class="card card-inverse col-md-8 well">
+            <div id="result" class="card-block">
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/javascripts/custom.js"></script>
+  </body>
+</html>

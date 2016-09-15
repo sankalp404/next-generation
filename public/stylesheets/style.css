@@ -1,0 +1,14 @@
+body{
+  background: #eee;
+}
+.container-fluid{
+  padding: 0px;
+}
+#header{
+  background: saddlebrown;
+  color: #fff;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  padding-bottom: 10px;
+}
