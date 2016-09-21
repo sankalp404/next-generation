@@ -84,10 +84,9 @@ function getNeighbors(cell, columns, rows) {
 
 function getNextGeneration(cells) {
   var liveCells = [];
-  for(var prop in cells){
-    var cell = cells[prop];
-    if(cell.neighbors == 3 || (cell.alive && cell.neighbors == 2)) {
-      var location = prop.split(',');
+  for(var cell in cells){
+    if(cells[cell].neighbors == 3 || (cells[cell].alive && cells[cell].neighbors == 2)) {
+      var location = cell.split(',');
       liveCells.push([Number(location[0]), Number(location[1])]);
     }
   }
