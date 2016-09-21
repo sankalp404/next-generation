@@ -47,6 +47,9 @@ function getNeighbors(cell, columns, rows) {
   var maxRow = rows - 1;
   var neighbors = [];
 
+  if(col > maxCol || row > maxRow){
+    return neighbors;
+  }
   // Left neighbor column
   if(col > 0){
     neighbors.push([col-1, row]);
